@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Anatolian Taste for reservations, orders, or feedback. We are happy to hear from you!">
+    <meta name="keywords" content="Contact Anatolian Taste, restaurant contact, order food, reservation, feedback">
+    <meta name="author" content="Anatolian Taste">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="contact.css">
+    <title>Anatolian Taste</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li> 
+                <li><a href="menu.html">Menu</a></li>  
+                <li><a href="about.html">About Us</a></li>  
+                <li><a href="contact.html">Contact</a></li>  
+                <li><a href="feedback.html">Give Us Feedback</a></li>  
+            </ul>
+        </nav>
+
+        <div class="contact">
+            <h2>Contact Us</h2>
+          <form id="myForm">
+            <label for="name">First Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your first name" required>
+
+            <label for="surname">Last Name:</label>
+            <input type="text" id="surname" name="surname" placeholder="Enter your last name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <button type="button" class="submit-button" onclick="gonder()">Submit</button>
+          </form>
+        <div class="message" id="message"></div>
+
+        </div>
+
+    
+        <script>
+            function gonder() {
+                var ad = document.getElementById("name").value;
+                var soyad = document.getElementById("surname").value;
+                var email = document.getElementById("email").value;
+                var telefon = document.getElementById("phone").value;
+                
+                if (ad && soyad && email && telefon) {
+                    document.getElementById("message").textContent = "Sent!";
+                    document.getElementById("message").style.color = "green";
+                } else {
+                    document.getElementById("message").textContent = "Please fill out all fields.";
+                    document.getElementById("message").style.color = "red";
+                }
+            }
+        </script>
+
+    </div>
+</body>
+</html>
